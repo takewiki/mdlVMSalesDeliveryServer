@@ -11,7 +11,7 @@
 #'
 #' @examples
 #' DeliveryLocationSelectServer()
-DeliveryLocationSelectServer <- function(input,output,session,dms_token,erptoken) {
+DeliveryLocationSelectServer <- function(input,output,session,app_id, run_env = "PRD"){
   #获取参数
   text_DeliveryLocation=tsui::var_text('text_DeliveryLocation')
 
@@ -29,6 +29,7 @@ DeliveryLocationSelectServer <- function(input,output,session,dms_token,erptoken
 
 
     }else{
+      erp_token = rdbepkg::dbConfig(FAppId = app_id, FType = "ERP", FRunEnv = run_env)
       data = mdlVMSalesDeliveryPkg::DeliveryLocation_select(erp_token = erp_token,FDeliveryLocation = FDeliveryLocation)
       tsui::run_dataTable2(id ='DeliveryLocation_resultView' ,data =data )
 
@@ -57,8 +58,8 @@ DeliveryLocationSelectServer <- function(input,output,session,dms_token,erptoken
 #'
 #' @examples
 #' DeliveryLocationServer()
-DeliveryLocationServer <- function(input,output,session,dms_token,erptoken) {
-  DeliveryLocationSelectServer(input = input,output = output,session = session,dms_token = dms_token,erptoken=erptoken)
+DeliveryLocationServer <- function(input,output,session, app_id, run_env = "PRD"){
+  DeliveryLocationSelectServer(input = input,output = output,session = session,app_id=app_id, run_env = run_env)
 
 
 }

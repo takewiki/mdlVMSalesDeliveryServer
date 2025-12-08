@@ -4,7 +4,7 @@
 \alias{DeliveryLocationServer}
 \title{处理逻辑}
 \usage{
-DeliveryLocationServer(input, output, session, dms_token, erptoken)
+DeliveryLocationServer(input, output, session, app_id, run_env = "PRD")
 }
 \arguments{
 \item{input}{输入}
