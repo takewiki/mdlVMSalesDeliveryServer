@@ -3,8 +3,9 @@
 #'
 #' @param input 输入
 #' @param output 输出
+#' @param app_id
+#' @param run_env
 #' @param session 会话
-#' @param dms_token 口令
 #'
 #' @return 返回值
 #' @export
@@ -50,8 +51,9 @@ DeliveryLocationSelectServer <- function(input,output,session,app_id, run_env = 
 #'
 #' @param input 输入
 #' @param output 输出
+#' @param app_id
+#' @param run_env
 #' @param session 会话
-#' @param dms_token 口令
 #'
 #' @return 返回值
 #' @export

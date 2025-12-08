@@ -12,8 +12,6 @@ DeliveryLocationServer(input, output, session, app_id, run_env = "PRD")
 \item{output}{输出}
 
 \item{session}{会话}
-
-\item{dms_token}{口令}
 }
 \value{
 返回值
