@@ -29,7 +29,7 @@ DeliveryLocationSelectServer <- function(input,output,session,dms_token,erptoken
 
 
     }else{
-      data = mdlVMSalesDeliveryPkg::add()
+      data = mdlVMSalesDeliveryPkg::DeliveryLocation_select(erp_token = erp_token,FDeliveryLocation = FDeliveryLocation)
       tsui::run_dataTable2(id ='DeliveryLocation_resultView' ,data =data )
 
       tsui::run_download_xlsx(id = 'dl_DeliveryLocation',data = data,filename = 'DeliveryLocation.xlsx')
