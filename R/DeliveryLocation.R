@@ -11,7 +11,7 @@
 #'
 #' @examples
 #' DeliveryLocationSelectServer()
-DeliveryLocationSelectServer <- function(input,output,session,dms_token) {
+DeliveryLocationSelectServer <- function(input,output,session,dms_token,erptoken) {
   #获取参数
   text_DeliveryLocation=tsui::var_text('text_DeliveryLocation')
 
@@ -29,8 +29,7 @@ DeliveryLocationSelectServer <- function(input,output,session,dms_token) {
 
 
     }else{
-      data = mdlVmDeliveryLocationr::DeliveryLocation_selectByDate(dms_token = dms_token,FCalculateYear = FCalculateYear,FLatestVersion =FLatestVersion ,FVersion = FVersion,FCalculationPeriod = FCalculationPeriod)
-
+      data = mdlVMSalesDeliveryPkg::add()
       tsui::run_dataTable2(id ='DeliveryLocation_resultView' ,data =data )
 
       tsui::run_download_xlsx(id = 'dl_DeliveryLocation',data = data,filename = 'DeliveryLocation.xlsx')
@@ -58,8 +57,8 @@ DeliveryLocationSelectServer <- function(input,output,session,dms_token) {
 #'
 #' @examples
 #' DeliveryLocationServer()
-DeliveryLocationServer <- function(input,output,session,dms_token) {
-  DeliveryLocationSelectServer(input = input,output = output,session = session,dms_token = dms_token)
+DeliveryLocationServer <- function(input,output,session,dms_token,erptoken) {
+  DeliveryLocationSelectServer(input = input,output = output,session = session,dms_token = dms_token,erptoken=erptoken)
 
 
 }

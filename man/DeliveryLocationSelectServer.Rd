@@ -4,7 +4,7 @@
 \alias{DeliveryLocationSelectServer}
 \title{处理逻辑}
 \usage{
-DeliveryLocationSelectServer(input, output, session, dms_token)
+DeliveryLocationSelectServer(input, output, session, dms_token, erptoken)
 }
 \arguments{
 \item{input}{输入}
