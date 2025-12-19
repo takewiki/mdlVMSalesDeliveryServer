@@ -103,7 +103,9 @@ DeliveryLocationSelectServer <- function(input,output,session,app_id, run_env = 
       # 增加对英文的支持datatable.
       tsui::run_dataTable2(id ='DeliveryLocation_resultView' ,data =data_selected,lang = 'en' )
 
-      tsui::run_download_xlsx(id = 'dl_DeliveryLocation',data = data_selected,filename = 'DeliveryLocation.xlsx')
+      filename=paste('DeliveryLocation-',Sys.Date(),'.xlsx')
+
+      tsui::run_download_xlsx(id = 'dl_DeliveryLocation',data = data_selected,filename = filename)
 
 
     }
