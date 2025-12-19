@@ -18,10 +18,10 @@ DeliveryLocationSelectServer <- function(input,output,session,app_id, run_env = 
   DeliveryLocation_all_columns <- c(
     'Delivery Location',
     'Sales OrderID',
-    'Sales OrderDate',
+    'Sales OrderQty',
     'PN',
     'Product Name',
-    'Sales OrderQty',
+    'Sales OrderDate',
     'Delivery Date',
     'Delivery Qty'
   )
@@ -30,10 +30,10 @@ DeliveryLocationSelectServer <- function(input,output,session,app_id, run_env = 
   DeliveryLocation_default_columns <- c(
     'Delivery Location',
     'Sales OrderID',
-    'Sales OrderDate',
+    'Sales OrderQty',
     'PN',
     'Product Name',
-    'Sales OrderQty'
+    'Sales OrderDate'
   )
   DeliveryLocation_reset_columns <- c(
     'Delivery Location',
