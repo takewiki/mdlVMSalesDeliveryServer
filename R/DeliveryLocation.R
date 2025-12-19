@@ -33,7 +33,9 @@ DeliveryLocationSelectServer <- function(input,output,session,app_id, run_env = 
     'Sales OrderDate',
     'PN',
     'Product Name',
-    'Sales OrderQty'
+    'Sales OrderQty',
+    'Delivery Date',
+    'Delivery Qty'
   )
   DeliveryLocation_reset_columns <- c(
     'Delivery Location',
